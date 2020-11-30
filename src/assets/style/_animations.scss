@@ -1,0 +1,129 @@
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 4px solid #1059bc;
+  border-color: #1059bc transparent #1059bc transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.lds-dual-ring-samll {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
+.lds-dual-ring-samll:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  // margin: 8px;
+  border-radius: 50%;
+  border: 4px solid #1059bc;
+  border-color: #1059bc transparent #1059bc transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.lds-dual-ring-samll-white:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  // margin: 8px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  border-color: #ffffff transparent #ffffff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes notifIn {
+  0% {
+    transform: translateX(300px);
+  }
+
+  30% {
+    transform: translateX(-20px);
+  }
+
+  55% {
+    transform: translateX(15px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes notifOut {
+  0% {
+    transform: translateX(0px);
+  }
+
+  20% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+.notification-in {
+  animation: notifIn 0.8s forwards ease;
+}
+
+.notification-out {
+  animation: notifOut 0.5s forwards ease;
+}

@@ -1,0 +1,142 @@
+// ############################################## Buttons START ##################################################
+.btn-primary-out {
+  @apply .rounded-md .h-11 .border-primary-100 .border-2 .text-primary-100 .px-4 .py-2 .transition .whitespace-no-wrap;
+}
+
+.btn-primary-out:hover {
+  @apply .shadow-lg;
+}
+
+.btn-primary-out:focus,
+.btn-primary-out:focus-within {
+  @apply .outline-none .shadow-outline;
+}
+
+.btn-primary {
+  @apply .rounded-md .h-11 .bg-primary-100 .text-white .px-4 .py-2 .transition .whitespace-no-wrap;
+}
+
+.btn-primary:hover {
+  @apply .bg-blue-700;
+}
+
+.btn-primary:focus,
+.btn-primary:focus-within {
+  @apply .outline-none .shadow-outline;
+}
+// ############################################## Buttons END ##################################################
+
+// ############################################## Inputs START ##################################################
+.input {
+  @apply .py-2 .px-3 .rounded-md .border-none .bg-white text-gray-800;
+}
+
+.input::placeholder {
+  @apply .text-gray-800;
+}
+
+.input:focus {
+  @apply .bg-gray-200 .border-none .outline-none;
+}
+// ############################################## Inputs END ##################################################
+
+// ############################################## Navbar START ##################################################
+.h-14 {
+  height: 3.5rem;
+}
+
+.navbar {
+  @apply .w-full .h-14 .fixed .bottom-0 .left-0 .transition-all .duration-500 .bg-gray-800 .overflow-hidden .text-gray-300;
+}
+
+.navbar-ul {
+  @apply .flex .justify-between .items-center .h-full .w-full;
+}
+
+.logo {
+  @apply .hidden;
+}
+
+.nav-item {
+  @apply .h-full .flex-center .transition-all .duration-500;
+}
+
+.nav-item:hover {
+  svg {
+    @apply text-gray-300;
+  }
+  .nav-text {
+    @apply .text-gray-300;
+  }
+  @apply .bg-gray-900;
+}
+
+.active {
+  svg {
+    @apply text-gray-300;
+  }
+  .nav-text {
+    @apply .text-gray-300;
+  }
+  @apply .bg-gray-900;
+}
+
+.nav-link {
+  @apply .flex .h-full .justify-center .items-center .transition-all .duration-500;
+}
+
+.nav-text {
+  @apply .h-full .text-gray-600 .hidden;
+}
+
+@media (min-width: 640px) {
+  .navbar {
+    @apply .top-0 .w-20 .h-full;
+  }
+
+  .navbar:hover {
+    img {
+      transition: all 0.5s;
+      transform: rotate(360deg);
+    }
+
+    .nav-text {
+      display: flex !important;
+      align-items: center !important;
+    }
+  }
+
+  .navbar:hover {
+    @apply w-48;
+  }
+
+  .nav-link {
+    @apply .w-full .h-full .justify-center .px-3;
+  }
+
+  .navbar-ul {
+    @apply .flex-col .justify-start .py-5;
+  }
+
+  .logo {
+    @apply .block .w-full .mb-6;
+  }
+
+  .nav-item {
+    width: 100% !important;
+  }
+}
+// ############################################## Navbar END ##################################################
+
+// ############################################## General START ##################################################
+.flex-center {
+  @apply .flex .justify-center .items-center;
+}
+
+.flex-col-center {
+  @apply .flex-col .justify-center .items-center;
+}
+
+.flex-between-center {
+  @apply .flex .justify-center .items-center;
+}
